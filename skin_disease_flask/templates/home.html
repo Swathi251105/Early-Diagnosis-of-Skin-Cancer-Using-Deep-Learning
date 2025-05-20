@@ -1,0 +1,64 @@
+ {% extends "base.html" %}
+
+  {% block title %} cnn {% endblock %}
+
+        {% block content %}
+ <style>
+     p{color:white;}
+ </style>
+     <form class="form-horizontal" style="width:40%;padding:3%;"  action="/submit" method="post" enctype="multipart/form-data">
+
+      <label  for="pwd">Upload Your Image :</label>
+        <input type="file" class="form-control" placeholder="Hours Studied"  required name="my_image" id="pwd"><br>
+        {{ msg }}
+        <button style="width:100px;height:30px;" type="submit" class=" btn-success">Submit</button>
+
+  </form><br><br>
+
+          {% if prediction %}
+                <img class="main-image" id="1" src="{{ img_path }}" width="30%" height="250px" alt=""><br><br>
+                 <p>Click on <b>Mask Image</b> to convert the selected image into mask image </p><br>
+                <button style="width:200px;height:50px;" type="button" onclick="maskImage()" class="btn-success save_button">Mask Image</button><br><br>
+
+
+
+                <div id="mask_image">
+                  <img class="main-image" id="2" src="{{ mask }}" width="30%" height="250px" alt=""><br><br>
+                    <p>Click on <b>Extract Image</b> to extract the features of mask image</p><br>
+                  <button style="width:200px;height:50px;" onclick="extractedImage()" type="button" class="btn-success save_button">Extract Image</button><br><br>
+               </div>
+
+
+               <div id="extracted_image">
+                  <img class="main-image" id="3" src="{{ feature }}" width="30%" height="250px" alt=""><br><br>
+                    <p>Click on <b>Prediction</b>  button for predicting.</p><br>
+                  <button style="width:200px;height:50px;margin-top:-4%;" onclick="predict()" type="button" class="btn-success save_button">Prediction</button><br>
+               </div><br><br>
+
+
+               <div id="prediction">
+                  <p>It is Predicting .... </p><br>
+                   <p class="text-muted">Please wait it may take few seconds ... </p><br>
+                     <div class="d-flex justify-content-center">
+                     <div style="color:white;" class="spinner-border" role="status">
+                        <span style="color:white;" class="sr-only">Loading...</span>
+                     </div>
+                   </div>
+               </div>
+
+               <div id="result">
+                  <p >Predicting is completed. Below are the Predicted Results. </p>
+                  <h2 class="jumbotron" style="width:70%;">Prediction :  {{ prediction }}</h2>
+                  <h2 id="accuracy" style="width:70%;" class="jumbotron">Probability Score :  {{ acc }} %</h2>
+               </div>
+
+      {% endif %}
+
+{% endblock %}
+
+
+
+
+
+
+
