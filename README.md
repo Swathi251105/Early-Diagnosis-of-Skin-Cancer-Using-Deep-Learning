@@ -1,5 +1,5 @@
 # Early-Diagnosis-of-Skin-Cancer-Using-Deep-Learning
-Early Diagnosis of Skin Cancer Using Deep Learning
+
 📌 Project Overview
 This project aims to assist in the early detection of skin cancer using dermoscopic images and deep learning (CNN-based) techniques. The system performs image preprocessing, lesion segmentation, and classification of skin lesions as benign or malignant, making it a valuable tool in medical diagnostics.
 
@@ -13,17 +13,7 @@ Frameworks: TensorFlow, Keras, PyTorch
 
 Tools: Anaconda, Spyder, Jupyter Notebook
 
-Libraries:
-
-OpenCV
-
-NumPy
-
-Pandas
-
-Matplotlib
-
-Scikit-learn
+Libraries: OpenCV, NumPy, Pandas, Matplotlib, Scikit-learn
 
 Dataset: ISIC Skin Cancer Dataset
 
