@@ -48,7 +48,6 @@ Run the installer and complete the installation with default settings.
 
 ### 📦 Step 4: Install Required Libraries
 In the Spyder IPython Console or Anaconda Prompt, run:
-```bash
 pip install tensorflow keras opencv-python numpy pandas matplotlib scikit-learn
 
 ### 📁 Step 5: Download ISIC Dataset
